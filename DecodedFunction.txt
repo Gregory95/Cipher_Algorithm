@@ -1,0 +1,11 @@
+	for (count=0; count < size; count++)
+	    {
+	        if (DecodedText[count] >= 'A' && DecodedText[count] <= 'Z')
+	        {
+	        	DecodedText[count] = (char)(((DecodedText[count] - key - 'A' + 26) % 26) + 'A');
+	        }
+	        else if (DecodedText[count] >= 'a' && DecodedText[count] <= 'z')
+	        {
+	        	DecodedText[count] = (char)(((DecodedText[count] - key - 'a' + 26) % 26) + 'a');
+	        }
+	    }
