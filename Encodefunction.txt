@@ -1,0 +1,21 @@
+void Encode(int key, string text, int size)
+{
+	int count;
+	for (count = 0; count < size; count++)
+	    	    {
+	    	    	//recognize only characters
+	    	        if (isalpha(text[count]))
+	    	        {
+	    	        	//shifting - number of key
+	    	            for (int i = 0; i < key; i++)
+	    	            {
+	    	                if (text[count] == 'z')
+	    	                    text[count] = 'a';
+	    	                else if (text[count] =='Z')
+	    	                	text[count] = 'A';
+	    	                else
+	    	                    text[count]++;
+	    	            }
+	    	        }
+	    	    }
+}
